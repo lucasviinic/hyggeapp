@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "kaufer",
+    "slug": "kaufer",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "kaufer"
+}
