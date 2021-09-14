@@ -11,12 +11,12 @@ import {
   SearchArea,
 } from './styles'
 
-export default function Home() {
+export default function Home({ navigation }) {
     return(
         <Container>
             <SearchArea>
                 <Logo width={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
-                <SearchField />
+                <SearchField navigation={navigation} />
             </SearchArea>
             <Footer>
                 <Text style={{color: "#EBEBEB", fontSize: 12}}>Copyright © 2021 - Käufer</Text>
