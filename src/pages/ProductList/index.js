@@ -9,10 +9,10 @@ import Footer from "../../components/Footer";
 
 import { Container } from "./styles";
 
-export default function ProductList({navigation}){
+export default function ProductList({ route, navigation }){
   return(
     <Container>
-        <SearchField navigation={navigation} />
+        <SearchField navigation={navigation} value={route.params} />
         <ScrollView>
           <ProductBox />
           <ProductBox />

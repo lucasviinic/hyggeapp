@@ -6,8 +6,8 @@ import {
     TextInput
 } from './styles'
 
-export default function Search({navigation}){
-  const [text, onChangeText] = useState(null)
+export default function Search({value, navigation}){
+  const [text, onChangeText] = useState(value)
 
   return(
     <SearchField>
@@ -16,7 +16,7 @@ export default function Search({navigation}){
         onChangeText={onChangeText}
         placeholder='O que você está procurando?' 
       />
-      <Lupa width={20} marginRight={15} onPress={() => alert(`Valor a submeter: ${text}`)} />
+      <Lupa width={20} marginRight={15} onPress={() => navigation.navigate('ProductList', text)} />
     </SearchField>
   )
 }
