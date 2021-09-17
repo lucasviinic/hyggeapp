@@ -14,8 +14,25 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={HomeScreen}
-          options={{ title: 'käufer' }} />
-        <Stack.Screen name="ProductList" component={ProductListScreen} />
+          options={{ 
+            title: null,
+            headerTintColor: 'rgba(255, 255, 255, 0.8)',
+            headerStyle: {
+              backgroundColor: '#5638A9',
+            },
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }} />
+        <Stack.Screen 
+        name="ProductList" 
+        component={ProductListScreen}
+        options={{
+          headerTintColor: 'rgba(255, 255, 255, 0.8)',
+          headerStyle: {
+            backgroundColor: '#5638A9',
+          }
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

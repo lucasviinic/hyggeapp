@@ -7,6 +7,8 @@ export const SearchField = styled.View`
   width: 300px;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 11px;
+  margin-bottom: 10px;
 `;
 
 export const TextInput = styled.TextInput`

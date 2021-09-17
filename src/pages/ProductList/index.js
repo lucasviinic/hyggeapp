@@ -18,6 +18,8 @@ export default function ProductList({ route, navigation }){
           <ProductBox />
           <ProductBox />
           <ProductBox />
+          <ProductBox />
+          <ProductBox />
         </ScrollView>
         <Footer />
     </Container>
