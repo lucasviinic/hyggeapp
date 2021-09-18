@@ -25,7 +25,7 @@ export default function ProductList({ route, navigation }){
   return(
     <Container>
         <SearchField navigation={navigation} value={route.params} />
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <ProductBox />
           <ProductBox />
           <ProductBox />

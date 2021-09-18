@@ -7,18 +7,18 @@ export const Box = styled.View`
   margin-bottom: 10px;
   flex-direction: row;
   background-color: #312055;
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
 `;
 
-export const ImageField = styled.View`
+export const ImageField = styled.TouchableOpacity`
   flex: 1;
   width: 103px;
   height: auto;
   margin-right: auto;
-  border-right-width: 1.3px;
+  border-right-width: 2px;
   border-style: solid;
-  border-color: #5638A9;
+  border-color: #543B89;
 `;
 
 export const ProductInfoField = styled.View`
