@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  background-color: #5638A9;
+  background-color: #543B89;
 `;
 
 export const Footer = styled.View`

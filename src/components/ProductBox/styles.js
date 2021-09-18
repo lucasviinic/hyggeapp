@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Box = styled.View`
   flex: 1;
-  width: 345px;
+  width: 100%;
   height: 120px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   flex-direction: row;
-  background-color: rgba(51, 23, 108, 1);
+  background-color: #312055;
   border-radius: 10px;
   overflow: hidden;
 `;

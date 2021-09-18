@@ -18,7 +18,7 @@ export default function App() {
             title: null,
             headerTintColor: 'rgba(255, 255, 255, 0.8)',
             headerStyle: {
-              backgroundColor: '#5638A9',
+              backgroundColor: '#543B89',
             },
             headerTitleStyle: {
               fontWeight: 'bold',
@@ -30,7 +30,7 @@ export default function App() {
         options={{
           headerTintColor: 'rgba(255, 255, 255, 0.8)',
           headerStyle: {
-            backgroundColor: '#5638A9',
+            backgroundColor: '#543B89',
           }
         }} />
       </Stack.Navigator>
