@@ -1,5 +1,5 @@
-import React from "react";
-import { ScrollView } from 'react-native'
+import React, {useLayoutEffect} from "react";
+import { ScrollView, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -7,9 +7,21 @@ import SearchField from '../../components/SearchField'
 import ProductBox from "../../components/ProductBox";
 import Footer from "../../components/Footer";
 
-import { Container } from "./styles";
+import { Container, Options } from "./styles";
 
 export default function ProductList({ route, navigation }){
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <Options>
+          <Text style={{color: "#FFFFFF", fontSize: 17, marginRight: 18}} onPress={() => alert('Tela de Cadastro')}>Sign-up</Text>
+          <Text style={{color: "#FFFFFF", fontSize: 17}} onPress={() => alert('Tela de Login')}>Login</Text>
+        </Options>
+      ),
+    });
+  }, [navigation]);
+
   return(
     <Container>
         <SearchField navigation={navigation} value={route.params} />

@@ -34,4 +34,9 @@ export const TextInput = styled.TextInput`
   color: #424242;
 `;
 
+export const Options = styled.View`
+  flex-direction: row;
+  padding: 1px;
+`;
+
 

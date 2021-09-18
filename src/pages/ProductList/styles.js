@@ -7,3 +7,8 @@ export const Container = styled.View`
   padding-left: 11px;
   padding-right: 11px;
 `;
+
+export const Options = styled.View`
+  flex-direction: row;
+  padding: 1px;
+`;
