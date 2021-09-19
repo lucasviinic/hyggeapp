@@ -15,8 +15,8 @@ export default function ProductList({ route, navigation }){
     navigation.setOptions({
       headerRight: () => (
         <Options>
-          <Text style={{color: "#FFFFFF", fontSize: 17, marginRight: 18}} onPress={() => alert('Tela de Cadastro')}>Sign-up</Text>
-          <Text style={{color: "#FFFFFF", fontSize: 17}} onPress={() => alert('Tela de Login')}>Login</Text>
+          <Text style={{color: "#FFFFFF", fontSize: 17, marginRight: 18}} onPress={() => navigation.navigate('Signup')}>Sign-up</Text>
+          <Text style={{color: "#FFFFFF", fontSize: 17}} onPress={() => navigation.navigate('Login')}>Login</Text>
         </Options>
       ),
     });
