@@ -1,7 +1,12 @@
 import React from "react";
-import {Text, ImageBackground} from 'react-native'
+import {Text, ImageBackground, TouchableOpacity} from 'react-native'
 
-import {Box, ImageField, ProductInfoField} from './styles'
+import {
+  Box, 
+  ImageField, 
+  ProductInfoField,
+  Price
+} from './styles'
 
 export default function ProductBox(){
 
@@ -23,7 +28,13 @@ export default function ProductBox(){
         <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
       </ImageField>
       <ProductInfoField>
-        <Text style={{fontSize: 18, color: "#FFFFFF", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</Text>
+        <TouchableOpacity>
+          <Text style={{fontSize: 18, color: "#FFFFFF", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</Text>
+        </TouchableOpacity>
+        <Price>
+          <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}>R$: 16.000</Text>
+          <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}> ↓ 20%</Text>
+        </Price>
       </ProductInfoField>
     </Box>
   )

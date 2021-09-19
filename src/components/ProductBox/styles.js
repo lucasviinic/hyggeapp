@@ -22,7 +22,7 @@ export const ImageField = styled.TouchableOpacity`
 `;
 
 export const ProductInfoField = styled.View`
-  flex-direction: row;
+  flex-direction: column;
   width: 223px;
   height: auto;
   margin-left: auto;
@@ -30,4 +30,12 @@ export const ProductInfoField = styled.View`
   padding-right: auto;
   padding-bottom: auto;
   padding-left: 10px;
+`;
+
+export const Price = styled.View`
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 9.7%;
+  margin-top: auto;
+  margin-bottom: 5%;
 `;
