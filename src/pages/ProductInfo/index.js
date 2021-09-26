@@ -2,9 +2,13 @@ import React, { useLayoutEffect, useEffect, useState } from 'react';
 import { Text } from 'react-native'
 import api from '../../services/Api'
 
+import SearchField from '../../components/SearchField'
+
 import {
   Container,
-  Options
+  ImageField,
+  Info,
+  SectionTitle
 } from './styles'
 
 export default function ProductInfo({ route, navigation }) {
@@ -23,22 +27,23 @@ export default function ProductInfo({ route, navigation }) {
         loadProduct(route.params)
     }, [])
 
-    useLayoutEffect(() => {
-    navigation.setOptions({
-        headerRight: () => (
-        <Options>
-        <Text style={{color: "#FFFFFF", fontSize: 17, marginRight: 18}} onPress={() => navigation.navigate('Signup')}>Sign-up</Text>
-        <Text style={{color: "#FFFFFF", fontSize: 17}} onPress={() => navigation.navigate('Login')}>Login</Text>
-        </Options>
-        ),
-    });
-    }, [navigation]);
-
     return(
         <Container>
-            <Text className="texto" style={{color: "#FFFFFF", marginTop: "auto", marginBottom: "auto" }}>
-            {product ? product.name : "Carregando..."}
-            </Text>
+            <SearchField navigation={navigation} value={route.params} />
+            <ImageField />
+            <Info>
+                <Text style={{
+                    marginTop: 15, 
+                    fontSize: 31, 
+                    color: "#FFFFFF", 
+                    textShadowColor: "#000000",
+                    textShadowOffset: {width: 1, height: 3.5},
+                    textShadowRadius: 20
+                }}>MacBook Pro</Text>
+                <SectionTitle>
+                    <Text style={{fontSize: 16, color: "#73B3FF"}}>Sobre</Text>
+                </SectionTitle>
+            </Info>
         </Container>
     )
 }

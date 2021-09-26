@@ -61,11 +61,7 @@ export default function App() {
         name="ProductInfo" 
         component={ProductInfoScreen}
         options={{
-          title: null,
-          headerTintColor: 'rgba(255, 255, 255, 0.8)',
-          headerStyle: {
-            backgroundColor: '#543B89',
-          }
+          headerShown: false
         }} />
       </Stack.Navigator>
     </NavigationContainer>
