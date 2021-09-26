@@ -26,9 +26,9 @@ export const ImageField = styled.View`
 `;
 
 export const SectionTitle = styled.View`
-  height: 20px;
+  height: 7.8%;
   width: 100%;
-  margin-top: 10px;
-  border-bottom-width: 1.3px
+  margin-top: 4%;
+  border-bottom-width: 1.2px
   border-color: #73B3FF;
 `;

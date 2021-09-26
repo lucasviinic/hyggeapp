@@ -40,8 +40,14 @@ export default function ProductInfo({ route, navigation }) {
                     textShadowOffset: {width: 1, height: 3.5},
                     textShadowRadius: 20
                 }}>MacBook Pro</Text>
+
                 <SectionTitle>
-                    <Text style={{fontSize: 16, color: "#73B3FF"}}>Sobre</Text>
+                    <Text style={{fontSize: 18, color: "#73B3FF"}}>Sobre</Text>
+                </SectionTitle>
+                <Text style={{fontSize: 22, color: "#FFFFFF", marginTop: 9}}>Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage"</Text>
+            
+                <SectionTitle>
+                    <Text style={{fontSize: 18, color: "#73B3FF"}}>Especificações</Text>
                 </SectionTitle>
             </Info>
         </Container>
