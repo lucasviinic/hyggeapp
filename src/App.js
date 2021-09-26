@@ -4,8 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from './pages/Home';
 import ProductListScreen from './pages/ProductList';
+import ProductInfoScreen from './pages/ProductInfo';
 import LoginScreen from './pages/Login';
-import SignupScreen from './pages/Signup'
+import SignupScreen from './pages/Signup';
 
 import Menu from './assets/menu';
 
@@ -49,6 +50,16 @@ export default function App() {
         <Stack.Screen 
         name="Signup" 
         component={SignupScreen}
+        options={{
+          title: null,
+          headerTintColor: 'rgba(255, 255, 255, 0.8)',
+          headerStyle: {
+            backgroundColor: '#543B89',
+          }
+        }} />
+        <Stack.Screen 
+        name="ProductInfo" 
+        component={ProductInfoScreen}
         options={{
           title: null,
           headerTintColor: 'rgba(255, 255, 255, 0.8)',
