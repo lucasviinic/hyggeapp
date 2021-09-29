@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  background-color: #543B89;
+  background-color: #181a1bf7;
 `;
 
 export const ProductName = styled.Text`
@@ -49,6 +49,7 @@ export const SubTitle = styled.Text`
 
 export const TextResume = styled.Text`
   margin-top: 6%;
+  margin-bottom: -10%;
   font-size: 20px;
   color: #FFFFFF;
   text-shadow-color: #000000;
@@ -73,7 +74,7 @@ export const Line = styled.View`
 
 export const PriceText = styled.Text`
   margin-top: 15%;
-  font-size: 20px;
+  font-size: 22px;
   color: #FFFFFF;
   text-shadow-color: #000000;
   text-shadow-offset: 1px 3.5px;
@@ -82,7 +83,7 @@ export const PriceText = styled.Text`
 
 export const CountryText = styled.Text`
   margin-top: 11%;
-  font-size: 20px;
+  font-size: 22px;
   color: #FFFFFF;
   text-shadow-color: #000000;
   text-shadow-offset: 1px 3.5px;

@@ -40,7 +40,7 @@ export default function ProductInfo({ route, navigation }) {
         <Container>
             <SearchField navigation={navigation} value={route.params} />
             <InfoView>
-                <ScrollView>
+                <ScrollView showsVerticalScrollIndicator={false}>
                     <ProductName>MacBook Pro</ProductName>
                     
                     <Section>
@@ -77,7 +77,7 @@ export default function ProductInfo({ route, navigation }) {
                                 <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
                                             shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
                             </SectionTitle>
-                            <PriceText style={{fontSize: 24, color: "#FFFFFF"}}>$1,299.00</PriceText>
+                            <PriceText>$1,299.00</PriceText>
                         </View>
                         <View style={{width: "50%"}}>
                             <SectionTitle>
@@ -85,7 +85,7 @@ export default function ProductInfo({ route, navigation }) {
                                 <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
                                             shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
                             </SectionTitle>
-                            <CountryText style={{fontSize: 24, color: "#FFFFFF"}}>Estados Unidos</CountryText>
+                            <CountryText>Estados Unidos</CountryText>
                         </View>
                     </View>
 
