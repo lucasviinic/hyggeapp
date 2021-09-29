@@ -20,12 +20,7 @@ export default function App() {
           name="Home" 
           component={HomeScreen}
           options={{ 
-            title: null,
-            headerTitle: () => <Menu />,
-            headerTintColor: 'rgba(255, 255, 255, 0.8)',
-            headerStyle: {
-              backgroundColor: '#543B89',
-            }
+            headerShown: false
           }} />
         <Stack.Screen 
         name="ProductList" 
