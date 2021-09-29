@@ -1,5 +1,5 @@
-import React, { useLayoutEffect, useEffect, useState } from 'react';
-import { Text } from 'react-native'
+import React, { useEffect, useState } from 'react';
+import { Text, ScrollView, View } from 'react-native'
 import api from '../../services/Api'
 
 import SearchField from '../../components/SearchField'
@@ -7,8 +7,14 @@ import SearchField from '../../components/SearchField'
 import {
   Container,
   ImageField,
-  Info,
-  SectionTitle
+  InfoView,
+  SectionTitle,
+  ProductName,
+  Line,
+  SubTitle,
+  TextResume, 
+  Section,
+  TextEspecification
 } from './styles'
 
 export default function ProductInfo({ route, navigation }) {
@@ -30,26 +36,38 @@ export default function ProductInfo({ route, navigation }) {
     return(
         <Container>
             <SearchField navigation={navigation} value={route.params} />
-            <ImageField />
-            <Info>
-                <Text style={{
-                    marginTop: 15, 
-                    fontSize: 31, 
-                    color: "#FFFFFF", 
-                    textShadowColor: "#000000",
-                    textShadowOffset: {width: 1, height: 3.5},
-                    textShadowRadius: 20
-                }}>MacBook Pro</Text>
-
-                <SectionTitle>
-                    <Text style={{fontSize: 18, color: "#73B3FF"}}>Sobre</Text>
-                </SectionTitle>
-                <Text style={{fontSize: 22, color: "#FFFFFF", marginTop: 9}}>Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage"</Text>
-            
-                <SectionTitle>
-                    <Text style={{fontSize: 18, color: "#73B3FF"}}>Especificações</Text>
-                </SectionTitle>
-            </Info>
+            <InfoView>
+                <ScrollView>
+                    <ProductName>MacBook Pro</ProductName>
+                    
+                    <Section>
+                        <SectionTitle>
+                            <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Sobre</SubTitle>
+                            <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
+                                        shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                        </SectionTitle>
+                        <TextResume>Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage</TextResume>
+                    </Section>
+                    
+                    <Section>
+                        <SectionTitle>
+                            <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Especificações</SubTitle>
+                            <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
+                                        shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                        </SectionTitle>
+                        <View style={{paddingTop: 10, paddingBottom: 10}}>
+                            <TextEspecification>• Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine</TextEspecification>
+                            <TextEspecification>• 8GB unified memory</TextEspecification>
+                            <TextEspecification>• 256GB SSD storage¹</TextEspecification>
+                            <TextEspecification>• Retina display with True Tone</TextEspecification>
+                            <TextEspecification>• Magic Keyboard</TextEspecification>
+                            <TextEspecification>• Touch ID</TextEspecification>
+                            <TextEspecification>• Force Touch trackpad</TextEspecification>
+                            <TextEspecification>• Two Thunderbolt / USB 4 ports</TextEspecification>
+                        </View>
+                    </Section>
+                </ScrollView>
+            </InfoView>
         </Container>
     )
 }
