@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, ScrollView, View } from 'react-native'
+import { ScrollView, View, Text, Pressable } from 'react-native'
 import api from '../../services/Api'
 
 import SearchField from '../../components/SearchField'
@@ -14,7 +14,10 @@ import {
   SubTitle,
   TextResume, 
   Section,
-  TextEspecification
+  TextEspecification,
+  PriceText,
+  CountryText,
+  NextButton
 } from './styles'
 
 export default function ProductInfo({ route, navigation }) {
@@ -66,6 +69,42 @@ export default function ProductInfo({ route, navigation }) {
                             <TextEspecification>• Two Thunderbolt / USB 4 ports</TextEspecification>
                         </View>
                     </Section>
+
+                    <View style={{flexDirection: 'row', height: 120}}>
+                        <View style={{width: "40%", marginRight: 35}}>
+                            <SectionTitle>
+                                <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Preço</SubTitle>
+                                <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
+                                            shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                            </SectionTitle>
+                            <PriceText style={{fontSize: 24, color: "#FFFFFF"}}>$1,299.00</PriceText>
+                        </View>
+                        <View style={{width: "50%"}}>
+                            <SectionTitle>
+                                <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>País</SubTitle>
+                                <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
+                                            shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                            </SectionTitle>
+                            <CountryText style={{fontSize: 24, color: "#FFFFFF"}}>Estados Unidos</CountryText>
+                        </View>
+                    </View>
+
+                    <NextButton style={{
+                        shadowColor: "#000",
+                        shadowOffset: {
+                            width: 0,
+                            height: 1,
+                        },
+                        shadowOpacity: 1,
+                        shadowRadius: 6.62,
+
+                        elevation: 5,
+                        }}>
+                        <Text style={{fontSize: 16, marginBottom: "auto", marginTop: "auto", 
+                                      shadowColor: "#000", shadowOffset: {width: 2, height: 3}, 
+                                      shadowOpacity: 1, shadowRadius: 3.62, elevation: 6.5
+                        }}>Seguir</Text>
+                    </NextButton>
                 </ScrollView>
             </InfoView>
         </Container>

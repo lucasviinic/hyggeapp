@@ -22,11 +22,6 @@ export const InfoView = styled.View`
   width: 97%;
 `;
 
-export const Options = styled.View`
-  flex-direction: row;
-  padding: 1px;
-`;
-
 export const ImageField = styled.View`
   background-color: white;
   align-items: center;
@@ -74,4 +69,33 @@ export const Line = styled.View`
   border-color: #73B3FF;
   border-bottom-width: 1.5px;
   margin-bottom: 5px;
+`;
+
+export const PriceText = styled.Text`
+  margin-top: 15%;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-shadow-color: #000000;
+  text-shadow-offset: 1px 3.5px;
+  text-shadow-radius: 20px;
+`;
+
+export const CountryText = styled.Text`
+  margin-top: 11%;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-shadow-color: #000000;
+  text-shadow-offset: 1px 3.5px;
+  text-shadow-radius: 20px;
+`;
+
+export const NextButton = styled.Pressable`
+  height: 43px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  border-radius: 8px;
+  align-items: center;
+  background-color: #41EB85;
 `;
