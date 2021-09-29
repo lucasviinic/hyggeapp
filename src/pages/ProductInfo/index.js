@@ -3,6 +3,7 @@ import { ScrollView, View, Text, Pressable } from 'react-native'
 import api from '../../services/Api'
 
 import SearchField from '../../components/SearchField'
+import CountryFlag from '../../assets/country-flags/united-33135'
 
 import {
   Container,
@@ -59,21 +60,21 @@ export default function ProductInfo({ route, navigation }) {
                                         shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
                         </SectionTitle>
                         <View style={{paddingTop: 10, paddingBottom: 10}}>
-                            <TextEspecification>• Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine</TextEspecification>
-                            <TextEspecification>• 8GB unified memory</TextEspecification>
-                            <TextEspecification>• 256GB SSD storage¹</TextEspecification>
-                            <TextEspecification>• Retina display with True Tone</TextEspecification>
-                            <TextEspecification>• Magic Keyboard</TextEspecification>
-                            <TextEspecification>• Touch ID</TextEspecification>
-                            <TextEspecification>• Force Touch trackpad</TextEspecification>
-                            <TextEspecification>• Two Thunderbolt / USB 4 ports</TextEspecification>
+                            <TextEspecification>•   Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine</TextEspecification>
+                            <TextEspecification>•   8GB unified memory</TextEspecification>
+                            <TextEspecification>•   256GB SSD storage¹</TextEspecification>
+                            <TextEspecification>•   Retina display with True Tone</TextEspecification>
+                            <TextEspecification>•   Magic Keyboard</TextEspecification>
+                            <TextEspecification>•   Touch ID</TextEspecification>
+                            <TextEspecification>•   Force Touch trackpad</TextEspecification>
+                            <TextEspecification>•   Two Thunderbolt / USB 4 ports</TextEspecification>
                         </View>
                     </Section>
 
                     <View style={{flexDirection: 'row', height: 120}}>
                         <View style={{width: "40%", marginRight: 35}}>
                             <SectionTitle>
-                                <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Preço</SubTitle>
+                                <SubTitle style={{fontSize: 17, color: "#73B3FF", marginBottom: 2}}>Preço</SubTitle>
                                 <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
                                             shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
                             </SectionTitle>
@@ -81,7 +82,10 @@ export default function ProductInfo({ route, navigation }) {
                         </View>
                         <View style={{width: "50%"}}>
                             <SectionTitle>
-                                <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>País</SubTitle>
+                                <View style={{flexDirection: 'row', marginBottom: 2}}>
+                                    <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>País</SubTitle>
+                                    <View style={{marginLeft: 5, marginTop: "auto", marginBottom: "auto"}}><CountryFlag /></View>
+                                </View>
                                 <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
                                             shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
                             </SectionTitle>
