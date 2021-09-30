@@ -1,5 +1,4 @@
 # Käufer ✈
-### Aplicação mobile "Käufer", desenvolvida com o objetivo de proporcionar compras internacionais mais baratas e viagens de graça.
 
 ### Sobre:
 No Brasil, devido aos altos impostos embutidos sobre o preço de produtos importados, é comum ouvir frases do tipo "É mais barato ir lá comprar e voltar". Partindo desse fato,
@@ -18,5 +17,5 @@ como principal objetivo). </p> Com isso, o usuário que está viajando têm o pr
 - MacBook Pro 16 Apple Intel Core i9 16GB RAM - 1TB SSD Prateado (Magazine Luiza) - R$ 20.699,10 | Link
 <p> 
 **STEP #02:** Busca do mesmo produto em loja da gringa
-</p>
+- Apple MacBook Pro (16-inch, 16GB RAM, 1TB Storage, 2.3GHz Intel Core i9) Silver (Amazon US) - U$ 2.629,00 | Link
 
