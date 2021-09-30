@@ -19,14 +19,15 @@ export const InfoView = styled.View`
   flex: 1;
   padding-left: 4%;
   padding-right: 4%;
+  padding-bottom: 70%;
   width: 97%;
 `;
 
 export const ImageField = styled.View`
-  background-color: white;
+  background-color: #FFFFFF;
   align-items: center;
   width: 100%;
-  height: 40%;
+  height: 30%;
 `;
 
 export const Section = styled.View`
