@@ -21,6 +21,7 @@ function MyTabs() {
   return (
     <Tab.Navigator 
     screenOptions={{
+      tabBarActiveTintColor: '#FFFFFF',
       tabBarStyle: {
         borderTopWidth: 0,
         backgroundColor: '#252728',
@@ -34,7 +35,7 @@ function MyTabs() {
           }} 
       />
       <Tab.Screen 
-        name="ProductInfo" 
+        name="Pedidos" 
         component={ProductInfoScreen}
         options={{ 
           headerShown: false
