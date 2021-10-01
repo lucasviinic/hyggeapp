@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from './pages/Home';
 import ProductListScreen from './pages/ProductList';
@@ -11,54 +12,33 @@ import SignupScreen from './pages/Signup';
 import Menu from './assets/menu';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen 
+          name="Home" 
+          component={HomeScreen} 
+          options={{ 
+            headerShown: false
+          }} 
+      />
+      <Tab.Screen 
+        name="ProductInfo" 
+        component={ProductInfoScreen}
+        options={{ 
+          headerShown: false
+        }} 
+      />
+    </Tab.Navigator>
+  );
+}
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen 
-          name="Home" 
-          component={HomeScreen}
-          options={{ 
-            headerShown: false
-          }} />
-        <Stack.Screen 
-        name="ProductList" 
-        component={ProductListScreen}
-        options={{
-          title: null,
-          headerTintColor: 'rgba(255, 255, 255, 0.8)',
-          headerStyle: {
-            backgroundColor: '#543B89',
-          }
-        }} />
-        <Stack.Screen 
-        name="Login" 
-        component={LoginScreen}
-        options={{
-          title: null,
-          headerTintColor: 'rgba(255, 255, 255, 0.8)',
-          headerStyle: {
-            backgroundColor: '#543B89',
-          }
-        }} />
-        <Stack.Screen 
-        name="Signup" 
-        component={SignupScreen}
-        options={{
-          title: null,
-          headerTintColor: 'rgba(255, 255, 255, 0.8)',
-          headerStyle: {
-            backgroundColor: '#543B89',
-          }
-        }} />
-        <Stack.Screen 
-        name="ProductInfo" 
-        component={ProductInfoScreen}
-        options={{
-          headerShown: false
-        }} />
-      </Stack.Navigator>
+      <MyTabs />
     </NavigationContainer>
   );
 }

@@ -32,7 +32,6 @@ export default function Home({ navigation }) {
                 <Logo width={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
                 <SearchField navigation={navigation} />
             </SearchArea>
-            <Footer />
         </Container>
     )
 }

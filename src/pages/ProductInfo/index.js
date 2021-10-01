@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, View, Text, ImageBackground } from 'react-native'
+import { ScrollView, View, Text, TouchableOpacity } from 'react-native'
 import api from '../../services/Api'
 
 import SearchField from '../../components/SearchField'
