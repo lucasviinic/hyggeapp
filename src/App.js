@@ -3,6 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import Icon from 'react-native-vector-icons/Feather';
+import LinearGradient from 'react-native-linear-gradient';
+
 import HomeScreen from './pages/Home';
 import ProductListScreen from './pages/ProductList';
 import ProductInfoScreen from './pages/ProductInfo';
@@ -16,7 +19,13 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator 
+    screenOptions={{
+      tabBarStyle: {
+        borderTopWidth: 0,
+        backgroundColor: '#252728',
+      }
+    }}>
       <Tab.Screen 
           name="Home" 
           component={HomeScreen} 
