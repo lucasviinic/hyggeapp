@@ -15,7 +15,7 @@ export const Footer = styled.View`
 
 export const SearchArea = styled.View`
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 66%;
 `;
 
 export const SearchField = styled.View`
