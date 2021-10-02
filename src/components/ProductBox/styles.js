@@ -18,7 +18,7 @@ export const ImageField = styled.TouchableOpacity`
   margin-right: auto;
   border-right-width: 2px;
   border-style: solid;
-  border-color: #543B89;
+  border-color: #2D2C33;
 `;
 
 export const ProductInfoField = styled.View`
