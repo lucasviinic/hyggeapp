@@ -25,7 +25,7 @@ export default function ProductBox(){
 
       elevation: 5,
     }}>
-      <LinearGradient style={{width: "100%", flexDirection: "row"}} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#313039', '#242329']}>
+      <LinearGradient style={{width: "100%", flexDirection: "row"}} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#2D2C33', '#3A3842']}>
         <ImageField>
           <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
         </ImageField>
