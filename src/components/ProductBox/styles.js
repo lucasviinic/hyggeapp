@@ -6,7 +6,7 @@ export const Box = styled.View`
   height: 120px;
   margin-bottom: 10px;
   flex-direction: row;
-  background-color: #312055;
+  background-color: #2B2A4F;
   border-radius: 14px;
   overflow: hidden;
 `;

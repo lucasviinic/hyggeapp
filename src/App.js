@@ -12,21 +12,32 @@ import ProductInfoScreen from './pages/ProductInfo';
 import LoginScreen from './pages/Login';
 import SignupScreen from './pages/Signup';
 
-import Menu from './assets/menu';
-
-const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator 
-    screenOptions={{
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ color, size }) => {
+        let iconName;
+  
+        switch (route.name) {
+          case 'Home':
+            iconName = 'home';
+            break;
+          case 'Pedidos':
+            iconName = 'list';
+            break;
+        }
+  
+        return <Icon name={iconName} size={size} color={color} />;
+      },
       tabBarActiveTintColor: '#FFFFFF',
       tabBarStyle: {
         borderTopWidth: 0,
         backgroundColor: '#252728',
       }
-    }}>
+    })}>
       <Tab.Screen 
           name="Home" 
           component={HomeScreen} 
@@ -36,7 +47,7 @@ function MyTabs() {
       />
       <Tab.Screen 
         name="Pedidos" 
-        component={ProductInfoScreen}
+        component={ProductListScreen}
         options={{ 
           headerShown: false
         }} 
