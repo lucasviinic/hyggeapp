@@ -1,8 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { Text } from 'react-native'
-import api from '../../services/Api';
+import { View, TouchableOpacity } from 'react-native'
 
-import Footer from '../../components/Footer'
 import SearchField from '../../components/SearchField'
 
 import Logo from '../../assets/logo.svg'
@@ -10,24 +8,27 @@ import Logo from '../../assets/logo.svg'
 import {
   Container,
   SearchArea,
-  Options
+  HeaderText
 } from './styles'
 
 export default function Home({ navigation }) {
-
-    useLayoutEffect(() => {
-        navigation.setOptions({
-          headerRight: () => (
-            <Options>
-              <Text style={{color: "#FFFFFF", fontSize: 17, marginRight: 18}} onPress={() => navigation.navigate('Signup')}>Sign-up</Text>
-              <Text style={{color: "#FFFFFF", fontSize: 17}} onPress={() => navigation.navigate('Login')}>Login</Text>
-            </Options>
-          ),
-        });
-      }, [navigation]);
-
     return(
         <Container>
+            <View style={{
+                marginRight: "9.5%",
+                marginTop: "7%",
+                height: 35, 
+                width: "100%",
+                flexDirection: "row",
+                justifyContent: "flex-end"
+            }}>
+                <TouchableOpacity>
+                    <HeaderText style={{marginRight: "6%"}} onPress={() => alert("Tela de Cadastro")}>Sign Up</HeaderText>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <HeaderText onPress={() => alert("Tela de Login")}>Log In</HeaderText>
+                </TouchableOpacity>
+            </View>
             <SearchArea>
                 <Logo width={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
                 <SearchField navigation={navigation} />

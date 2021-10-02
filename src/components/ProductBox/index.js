@@ -1,5 +1,6 @@
 import React from "react";
 import {Text, ImageBackground, TouchableOpacity} from 'react-native'
+import LinearGradient from "react-native-linear-gradient";
 
 import {
   Box, 
@@ -24,18 +25,20 @@ export default function ProductBox(){
 
       elevation: 5,
     }}>
-      <ImageField>
-        <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
-      </ImageField>
-      <ProductInfoField>
-        <TouchableOpacity>
-          <Text style={{fontSize: 18, color: "#FFFFFF", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</Text>
-        </TouchableOpacity>
-        <Price>
-          <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}>R$: 16.000</Text>
-          <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}> ↓ 20%</Text>
-        </Price>
-      </ProductInfoField>
+      <LinearGradient style={{width: "100%", flexDirection: "row"}} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#313039', '#242329']}>
+        <ImageField>
+          <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
+        </ImageField>
+        <ProductInfoField>
+          <TouchableOpacity>
+            <Text style={{fontSize: 18, color: "#FFFFFF", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</Text>
+          </TouchableOpacity>
+          <Price>
+            <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}>R$: 16.000</Text>
+            <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}> ↓ 20%</Text>
+          </Price>
+        </ProductInfoField>
+      </LinearGradient>
     </Box>
   )
 }

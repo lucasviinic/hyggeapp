@@ -8,9 +8,12 @@ export const Container = styled.View`
   padding-right: 11px;
 `;
 
-export const Footer = styled.View`
-  margin-top: auto;
-  margin-bottom: 20px;
+export const HeaderText = styled.Text`
+  font-size: 18px;
+  color: #FFFFFF;
+  text-shadow-color: #000000;
+  text-shadow-offset: 1px 3.5px;
+  text-shadow-radius: 20px;
 `;
 
 export const SearchArea = styled.View`

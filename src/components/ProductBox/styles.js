@@ -13,7 +13,7 @@ export const Box = styled.View`
 
 export const ImageField = styled.TouchableOpacity`
   flex: 1;
-  width: 103px;
+  width: 35%;
   height: auto;
   margin-right: auto;
   border-right-width: 2px;
