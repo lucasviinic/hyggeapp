@@ -6,7 +6,8 @@ import {
   Box, 
   ImageField, 
   ProductInfoField,
-  Price
+  Price,
+  ResumeText
 } from './styles'
 
 export default function ProductBox(){
@@ -21,24 +22,22 @@ export default function ProductBox(){
         height: 1,
       },
       shadowOpacity: 1,
-      shadowRadius: 6.62,
+      shadowRadius: 2,
 
-      elevation: 5,
+      elevation: 3,
     }}>
-      <LinearGradient style={{width: "100%", flexDirection: "row"}} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#2D2C33', '#3A3842']}>
-        <ImageField>
-          <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
-        </ImageField>
-        <ProductInfoField>
-          <TouchableOpacity>
-            <Text style={{fontSize: 18, color: "#FFFFFF", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</Text>
-          </TouchableOpacity>
-          <Price>
-            <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}>R$: 16.000</Text>
-            <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}> ↓ 20%</Text>
-          </Price>
-        </ProductInfoField>
-      </LinearGradient>
+      <ImageField>
+        <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
+      </ImageField>
+      <ProductInfoField>
+        <TouchableOpacity>
+          <ResumeText style={{fontSize: 18, color: "#2D2D2D", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</ResumeText>
+        </TouchableOpacity>
+        <Price>
+          <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}>R$: 16.000</Text>
+          <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}> ↓ 20%</Text>
+        </Price>
+      </ProductInfoField>
     </Box>
   )
 }

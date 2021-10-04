@@ -3,17 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  background-color: #181a1bf7;
+  background-color: #EDF3F5;
   padding-left: 11px;
   padding-right: 11px;
 `;
 
 export const HeaderText = styled.Text`
   font-size: 18px;
-  color: #FFFFFF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  color: #888888;
+  font-weight: bold;
+  text-shadow-color: #CADFEA;
+  text-shadow-offset: 1px 1px;
+  text-shadow-radius: 3.5px;
 `;
 
 export const SearchArea = styled.View`

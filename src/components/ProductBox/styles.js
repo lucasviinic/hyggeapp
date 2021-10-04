@@ -6,7 +6,6 @@ export const Box = styled.View`
   height: 120px;
   margin-bottom: 10px;
   flex-direction: row;
-  background-color: #2B2A4F;
   border-radius: 14px;
   overflow: hidden;
 `;
@@ -18,7 +17,7 @@ export const ImageField = styled.TouchableOpacity`
   margin-right: auto;
   border-right-width: 2px;
   border-style: solid;
-  border-color: #2D2C33;
+  border-color: #EDF3F5;
 `;
 
 export const ProductInfoField = styled.View`
@@ -30,12 +29,18 @@ export const ProductInfoField = styled.View`
   padding-right: auto;
   padding-bottom: auto;
   padding-left: 10px;
+  background-color: #FFFFFF;
 `;
 
 export const Price = styled.View`
   flex-direction: row;
   margin-left: auto;
   margin-right: 9.7%;
-  margin-top: auto;
+  margin-top: auto;'
   margin-bottom: 5%;
+`;
+
+export const ResumeText = styled.Text`
+  font-size: 18px;
+  color: #2D2D2D;
 `;

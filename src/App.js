@@ -32,10 +32,10 @@ function MyTabs() {
   
         return <Icon name={iconName} size={size} color={color} />;
       },
-      tabBarActiveTintColor: '#FFFFFF',
+      tabBarActiveTintColor: '#3D3D3D',
       tabBarStyle: {
         borderTopWidth: 0,
-        backgroundColor: '#252728',
+        backgroundColor: '#FFFFFF',
       }
     })}>
       <Tab.Screen 
