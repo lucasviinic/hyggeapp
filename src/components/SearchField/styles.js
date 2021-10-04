@@ -6,7 +6,7 @@ export const SearchField = styled.View`
   height: 43px;
   width: 91%;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #FFFFFF;
   margin-top: 4.5%;
   margin-bottom: 4.5%;
 `;

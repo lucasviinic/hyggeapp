@@ -17,9 +17,9 @@ export default function Search({value, navigation}){
         height: 1,
       },
       shadowOpacity: 1,
-      shadowRadius: 6.62,
+      shadowRadius: 2,
 
-      elevation: 5,
+      elevation: 3,
     }}>
       <TextInput 
         value={text}

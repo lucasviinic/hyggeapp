@@ -19,7 +19,7 @@ export const HeaderText = styled.Text`
 
 export const SearchArea = styled.View`
   margin-top: auto;
-  margin-bottom: 66%;
+  margin-bottom: 75%;
 `;
 
 export const SearchField = styled.View`
