@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, View, Text, TouchableOpacity } from 'react-native'
+import { ScrollView, View, Text, Image, ImageBackground } from 'react-native'
 import api from '../../services/Api'
 
 import SearchField from '../../components/SearchField'
@@ -42,24 +42,25 @@ export default function ProductInfo({ route, navigation }) {
             <SearchField navigation={navigation} value={route.params} />
             <View style={{flex: 1}}>
                 <ScrollView showsVerticalScrollIndicator={false}>
-                    <ImageField />
+                    <ImageField>
+                        <Image style={{width: "100%", height: "100%"}} source={product ? {uri: product.img} : require('../../assets/loading_image.png')} />
+                    </ImageField>
                     <InfoView>
-                            <ProductName>MacBook Pro</ProductName>
-                            
+                            <ProductName>{product ? product.name : "Carregando..."}</ProductName>
                             <Section>
                                 <SectionTitle>
-                                    <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Sobre</SubTitle>
+                                    <SubTitle>Sobre</SubTitle>
                                     <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
-                                                shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                                                    shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }} />
                                 </SectionTitle>
-                                <TextResume>Apple M1 Chip with 8-Core CPU and 7-Core GPU 256GB Storage</TextResume>
+                                <TextResume>{product ? product.resume : "Carregando..."}</TextResume>
                             </Section>
                             
                             <Section>
                                 <SectionTitle>
                                     <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Especificações</SubTitle>
                                     <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
-                                                shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                                                    shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }} />
                                 </SectionTitle>
                                 <View style={{paddingTop: 10, paddingBottom: 10}}>
                                     <TextEspecification>•   Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine</TextEspecification>
