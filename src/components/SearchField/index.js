@@ -26,7 +26,7 @@ export default function Search({value, navigation}){
         onChangeText={onChangeText}
         placeholder='O que você quer comprar?' 
       />
-      <Lupa width={20} marginRight={15} onPress={() => navigation.navigate('Pedidos', text)} />
+      <Lupa width={20} marginRight={15} onPress={() => navigation.navigate('ProductInfo', text)} />
     </SearchField>
   )
 }

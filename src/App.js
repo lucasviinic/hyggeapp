@@ -12,6 +12,17 @@ import ProductInfoScreen from './pages/ProductInfo';
 import LoginScreen from './pages/Login';
 import SignupScreen from './pages/Signup';
 
+const Stack = createNativeStackNavigator();
+
+function HomeScreenTest() {
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="ProductInfo" component={ProductInfoScreen} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  )
+}
+
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
@@ -40,7 +51,7 @@ function MyTabs() {
     })}>
       <Tab.Screen 
           name="Home" 
-          component={HomeScreen} 
+          component={HomeScreenTest} 
           options={{ 
             headerShown: false
           }} 

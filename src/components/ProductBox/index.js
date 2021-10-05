@@ -31,7 +31,7 @@ export default function ProductBox(){
       </ImageField>
       <ProductInfoField>
         <TouchableOpacity>
-          <ResumeText style={{fontSize: 18, color: "#2D2D2D", opacity: 0.8}}>MacBook Pro 16” Apple Intel Core i9 16GB...</ResumeText>
+          <ResumeText>MacBook Pro 16” Apple Intel Core i9 16GB...</ResumeText>
         </TouchableOpacity>
         <Price>
           <Text style={{fontSize: 17, fontWeight: "bold", color: "#4ED37B"}}>R$: 16.000</Text>

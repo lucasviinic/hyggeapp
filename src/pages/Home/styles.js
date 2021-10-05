@@ -10,11 +10,12 @@ export const Container = styled.View`
 
 export const HeaderText = styled.Text`
   font-size: 18px;
-  color: #888888;
+  color: #3D3D3D;
+  opacity: 0.7;
   font-weight: bold;
   text-shadow-color: #CADFEA;
-  text-shadow-offset: 1px 1px;
-  text-shadow-radius: 3.5px;
+  text-shadow-offset: 0.5px 0.5px;
+  text-shadow-radius: 1.5px;
 `;
 
 export const SearchArea = styled.View`

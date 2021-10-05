@@ -3,16 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.View`
   flex: 1;
   align-items: center;
-  background-color: #181a1bf7;
+  background-color: #EDF3F5;
 `;
 
 export const ProductName = styled.Text`
   margin-top: 15px;
   font-size: 31px;
-  color: #FFFFFF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  color: #4B5052;
 `;
 
 export const InfoView = styled.View`
@@ -24,7 +21,7 @@ export const InfoView = styled.View`
 `;
 
 export const ImageField = styled.View`
-  background-color: #FFFFFF;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   height: 30%;
@@ -43,28 +40,20 @@ export const SectionTitle = styled.View`
 export const SubTitle = styled.Text`
   font-size: 17px;
   color: #73B3FF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  font-weight: bold;
 `;
 
 export const TextResume = styled.Text`
-  margin-top: 6%;
+  margin-top: 9%;
   margin-bottom: -10%;
   font-size: 20px;
-  color: #FFFFFF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  color: #4B5052;
 `;
 
 export const TextEspecification = styled.Text`
   margin-top: 1%;
   font-size: 20px;
-  color: #FFFFFF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  color: #4B5052;
 `;
 
 export const Line = styled.View`
@@ -76,19 +65,13 @@ export const Line = styled.View`
 export const PriceText = styled.Text`
   margin-top: 15%;
   font-size: 22px;
-  color: #FFFFFF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  color: #4B5052;
 `;
 
 export const CountryText = styled.Text`
   margin-top: 11%;
   font-size: 22px;
-  color: #FFFFFF;
-  text-shadow-color: #000000;
-  text-shadow-offset: 1px 3.5px;
-  text-shadow-radius: 20px;
+  color: #4B5052;
 `;
 
 export const NextButton = styled.Pressable`
