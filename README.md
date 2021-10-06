@@ -1,7 +1,7 @@
 # Käufer ✈
 
 ### Sobre:
-No Brasil, devido aos altos impostos embutidos sobre o preço de produtos importados, é comum ouvir frases do tipo "É mais barato ir lá comprar e voltar". Partindo desse fato,
+No Brasil, devido aos altos impostos embutidos sobre o preço de produtos importados, é comum ouvir frases do tipo "É mais barato ir lá comprar". Partindo desse fato,
 o aplicativo Käufer visa tornar tais compras concretas e acessíveis. 
 
 ### Como funciona ?
