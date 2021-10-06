@@ -14,9 +14,9 @@ como principal objetivo). </p> Com isso, o usuário que está viajando têm o pr
 ### Screenshots
 
 <p float="left">
-  <img src="https://i.imgur.com/ru1Ymrf.jpeg" width="210" />
-  <img src="https://i.imgur.com/l66vSZX.jpeg" width="210" />
-  <img src="https://i.imgur.com/peyejlY.jpeg" width="210" />
-  <img src="https://i.imgur.com/mWpNbiB.jpeg" width="210" />
+  <img src="https://i.imgur.com/ru1Ymrf.jpeg" width="205" />
+  <img src="https://i.imgur.com/l66vSZX.jpeg" width="205" />
+  <img src="https://i.imgur.com/peyejlY.jpeg" width="205" />
+  <img src="https://i.imgur.com/mWpNbiB.jpeg" width="205" />
 </p>
 
