@@ -50,8 +50,7 @@ export default function ProductInfo({ route, navigation }) {
                             <Section>
                                 <SectionTitle>
                                     <SubTitle>Sobre</SubTitle>
-                                    <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
-                                                    shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }} />
+                                    <Line />
                                 </SectionTitle>
                                 <TextResume>{product ? product.resume : "Carregando..."}</TextResume>
                             </Section>
@@ -59,8 +58,7 @@ export default function ProductInfo({ route, navigation }) {
                             <Section>
                                 <SectionTitle>
                                     <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>Especificações</SubTitle>
-                                    <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
-                                                    shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }} />
+                                    <Line />
                                 </SectionTitle>
                                 <View style={{paddingTop: 10, paddingBottom: 10}}>
                                     <TextEspecification>•   Apple M1 chip with 8‑core CPU, 7‑core GPU, and 16‑core Neural Engine</TextEspecification>
@@ -78,8 +76,7 @@ export default function ProductInfo({ route, navigation }) {
                                 <View style={{width: "40%", marginRight: 35}}>
                                     <SectionTitle>
                                         <SubTitle style={{fontSize: 17, color: "#73B3FF", marginBottom: 2}}>Preço</SubTitle>
-                                        <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
-                                                    shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                                        <Line />
                                     </SectionTitle>
                                     <PriceText>$1,299.00</PriceText>
                                 </View>
@@ -89,8 +86,7 @@ export default function ProductInfo({ route, navigation }) {
                                             <SubTitle style={{fontSize: 17, color: "#73B3FF"}}>País</SubTitle>
                                             <View style={{marginLeft: 5, marginTop: "auto", marginBottom: "auto"}}><CountryFlag /></View>
                                         </View>
-                                        <Line style={{shadowColor: "#000", shadowOffset: {width: 2, height: 4}, 
-                                                    shadowOpacity: 1, shadowRadius: 9.62, elevation: 3.5, }}/>
+                                        <Line />
                                     </SectionTitle>
                                     <CountryText>Estados Unidos</CountryText>
                                 </View>

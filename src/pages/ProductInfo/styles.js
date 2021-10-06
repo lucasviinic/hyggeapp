@@ -58,8 +58,9 @@ export const TextEspecification = styled.Text`
 
 export const Line = styled.View`
   border-color: #73B3FF;
-  border-bottom-width: 1.5px;
+  border-bottom-width: 2px;
   margin-bottom: 5px;
+  opacity: 0.7;
 `;
 
 export const PriceText = styled.Text`
