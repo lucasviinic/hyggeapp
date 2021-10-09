@@ -20,3 +20,16 @@ como principal objetivo). </p> Com isso, o usuário que está viajando têm o pr
   <img src="https://i.imgur.com/mWpNbiB.jpeg" width="205" />
 </p>
 
+#### Telas construidas até o momento
+
+- [x] 1. Home (Tela principal, onde se encontra o campo de busca)
+- [x] 2. Informações do Produto
+- [x] 3. Lista de Pedidos
+- [ ] 4. Adicionar Pedido Personalizado
+- [ ] 5. Tela de Cadastro
+- [ ] 6. Tela de Login
+- [ ] 7. Perfil (Tela onde é exibido as informações do usuário)
+
+##### Obs: Obviamente, mais telas serão adicionadas na lista, estas são as previstas até o momento.
+
+
