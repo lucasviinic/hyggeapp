@@ -1,8 +1,8 @@
-# Käufer ✈
+# Käufer Mobile App ✈ #SideProject
 
 ## Sobre
 
-Projeto de compras desenvolvido em React Native. Este projeto tem como objetivo exibir de forma amigável todas as funcionalidades desenvolvidas no <a href="https://github.com/lucasviinic/kauferservices/"> serviço back-end </a> construído utilizando Django REST Framework. 
+Aplicativo de compras desenvolvido em React Native. Este projeto tem como objetivo exibir de forma amigável todas as funcionalidades desenvolvidas no <a href="https://github.com/lucasviinic/kauferservices/"> serviço back-end </a> construído utilizando Django REST Framework. 
 
 ### Screenshots
 
