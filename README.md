@@ -2,7 +2,13 @@
 
 ## Sobre
 
-Aplicativo de compras desenvolvido em React Native. Este projeto tem como objetivo exibir de forma amigável todas as funcionalidades desenvolvidas no <a href="https://github.com/lucasviinic/kauferservices/"> serviço back-end </a> construído utilizando Django REST Framework. 
+Aplicativo de compras desenvolvido em React Native. Este projeto tem como objetivo exibir de forma amigável todas as funcionalidades desenvolvidas no <a href="https://github.com/lucasviinic/kauferservices/"> serviço back-end </a> construído utilizando Django REST Framework.
+
+## Download e Configuração
+
+1. Clone o repositório
+2. Na raiz do projeto, abra o terminal e instale as dependências, portanto, `npm install`
+3. Feito isso, rode a aplicação com o comando `react-native run-android`
 
 ### Screenshots
 
