@@ -25,7 +25,7 @@ function HomeScreenTest() {
 
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
+function HomeTabs() {
   return (
     <Tab.Navigator 
     screenOptions={({ route }) => ({
@@ -50,11 +50,11 @@ function MyTabs() {
       }
     })}>
       <Tab.Screen 
-          name="Home" 
-          component={HomeScreenTest} 
-          options={{ 
-            headerShown: false
-          }} 
+        name="Home" 
+        component={HomeScreenTest} 
+        options={{ 
+          headerShown: false
+        }} 
       />
       <Tab.Screen 
         name="Pedidos" 
@@ -70,7 +70,12 @@ function MyTabs() {
 export default function App() {
   return (
     <NavigationContainer>
-      <MyTabs />
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={HomeTabs} options={{ headerShown: false }} />
+      </Stack.Navigator>      
     </NavigationContainer>
+
   );
 }
