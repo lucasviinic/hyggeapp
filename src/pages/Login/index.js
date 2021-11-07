@@ -29,7 +29,7 @@ export default function Login({ navigation }) {
   return(
     <Container>
       <TouchableOpacity style={{marginTop: "9%", marginLeft: "70%"}}>
-        <Text style={{fontSize: 18.5, fontWeight: "bold", color: "#606060"}}>Sign Up</Text>
+        <Text style={{fontSize: 20, fontWeight: "bold", color: "#606060"}}>Sign Up</Text>
       </TouchableOpacity>
       <FormArea>
         <Logo width={220} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />

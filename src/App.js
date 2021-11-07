@@ -4,25 +4,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Icon from 'react-native-vector-icons/Feather';
-import LinearGradient from 'react-native-linear-gradient';
+import PlusIcon from './assets/plus-icon.svg'
 
 import HomeScreen from './pages/Home';
 import ProductListScreen from './pages/ProductList';
 import ProductInfoScreen from './pages/ProductInfo';
 import LoginScreen from './pages/Login';
 import SignupScreen from './pages/Signup';
+import { View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
-
-function HomeScreenTest() {
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="ProductInfo" component={ProductInfoScreen} options={{ headerShown: false }} />
-    </Stack.Navigator>
-  )
-}
-
 const Tab = createBottomTabNavigator();
 
 function HomeTabs() {
@@ -51,10 +42,30 @@ function HomeTabs() {
     })}>
       <Tab.Screen 
         name="Home" 
-        component={HomeScreenTest} 
+        component={HomeScreen} 
         options={{ 
           headerShown: false
         }} 
+      />
+      <Tab.Screen
+        name="Personalizar"
+        component={HomeScreen}
+        options={() => ({
+          tabBarIcon: () => (
+            <View style={{
+              backgroundColor: '#55DD93', 
+              width: 50,
+              height: 50,
+              borderRadius: 50,
+              marginBottom: 22,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <PlusIcon />
+            </View>
+          ),
+          headerShown: false
+        })}
       />
       <Tab.Screen 
         name="Pedidos" 
@@ -73,7 +84,8 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Home" component={HomeTabs} options={{ headerShown: false }} />
+        <Stack.Screen name="HomeTabs" component={HomeTabs} options={{ headerShown: false }} />
+        <Stack.Screen name="ProductInfo" component={ProductInfoScreen} options={{ headerShown: false }} />
       </Stack.Navigator>      
     </NavigationContainer>
 

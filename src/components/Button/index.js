@@ -17,7 +17,7 @@ export default ({text, style, navigation}) => {
 
         elevation: 5,
         }} 
-        onPress={() => navigation.navigate('Home')}>
+        onPress={() => navigation.navigate('HomeTabs')}>
         <Text style={{fontSize: 16, marginBottom: "auto", marginTop: "auto", 
                     shadowColor: "#000", shadowOffset: {width: 2, height: 3}, 
                     shadowOpacity: 1, shadowRadius: 3.62, elevation: 6.5
