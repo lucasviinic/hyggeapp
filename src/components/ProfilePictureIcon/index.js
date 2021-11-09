@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Pressable, Alert } from 'react-native'
+import { Image, Pressable, Alert } from 'react-native'
 
 import { ProfilePictureIcon } from './styles';
 
