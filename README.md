@@ -13,10 +13,11 @@ Aplicativo de compras desenvolvido em React Native. Este projeto tem como objeti
 ### Screenshots
 
 <p float="left">
-  <img src="https://i.imgur.com/ru1Ymrf.jpeg" width="195" />
+  <img src="https://i.imgur.com/z9TXjZv.jpg" width="195" />
+  <img src="https://i.imgur.com/yNqqE1P.jpg" width="195" />
   <img src="https://i.imgur.com/l66vSZX.jpeg" width="195" />
   <img src="https://i.imgur.com/peyejlY.jpeg" width="195" />
-  <img src="https://i.imgur.com/mWpNbiB.jpeg" width="195" />
+  <img src="https://i.imgur.com/6m3nQez.jpg" width="195" />
 </p>
 
 #### Telas construidas até o momento
