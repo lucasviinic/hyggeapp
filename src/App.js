@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Icon from 'react-native-vector-icons/Feather';
 import PlusIcon from './assets/plus-icon.svg'
+import HomeIcon from './assets/home-icon.svg'
+import ProductListIcon from './assets/list-icon.svg'
 
 import HomeScreen from './pages/Home';
 import ProductListScreen from './pages/ProductList';
@@ -25,14 +27,12 @@ function HomeTabs() {
   
         switch (route.name) {
           case 'Home':
-            iconName = 'home';
+            return <HomeIcon width={30} height={30} fill={color} />;
             break;
           case 'Pedidos':
-            iconName = 'list';
+            return <ProductListIcon width={21} height={21} fill={color} />;
             break;
         }
-  
-        return <Icon name={iconName} size={size} color={color} />;
       },
       tabBarActiveTintColor: '#3D3D3D',
       tabBarStyle: {
