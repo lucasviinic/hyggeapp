@@ -26,7 +26,7 @@ Aplicativo de compras desenvolvido em React Native. Este projeto tem como objeti
 - [x] 3. Lista de Pedidos
 - [ ] 4. Adicionar Pedido Personalizado
 - [ ] 5. Tela de Cadastro
-- [ ] 6. Tela de Login
+- [x] 6. Tela de Login
 - [ ] 7. Perfil (Tela onde é exibido as informações do usuário)
 
 ##### Obs: Obviamente, mais telas serão adicionadas na lista, estas são as previstas até o momento.
