@@ -10,7 +10,7 @@ export const Box = styled.View`
   overflow: hidden;
 `;
 
-export const ImageField = styled.TouchableOpacity`
+export const ImageField = styled.Pressable`
   flex: 1;
   width: 35%;
   height: auto;

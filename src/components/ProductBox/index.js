@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, ImageBackground, TouchableOpacity} from 'react-native'
+import {Text, ImageBackground, TouchableOpacity, Alert} from 'react-native'
 import LinearGradient from "react-native-linear-gradient";
 
 import {
@@ -26,7 +26,7 @@ export default function ProductBox(){
 
       elevation: 3,
     }}>
-      <ImageField>
+      <ImageField onPress={() => Alert.alert('Em construção', 'Exibe um modal com as fotos disponíveis')}>
         <ImageBackground source={image} resizeMode="cover" style={{flex: 1}}/>
       </ImageField>
       <ProductInfoField>
