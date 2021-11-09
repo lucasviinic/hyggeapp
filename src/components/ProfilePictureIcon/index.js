@@ -7,7 +7,7 @@ export default ({style}) => {
     return (
         <Pressable style={style} onPress={() => Alert.alert('Em construção', 'Vai para a tela com as informações de usuário')} >
             <ProfilePictureIcon>
-                <Image style={{width: 55, height: 55}} 
+                <Image style={{width: 50, height: 50}} 
                     source={require('../../assets/eu.jpg')} />
             </ProfilePictureIcon> 
         </Pressable>
