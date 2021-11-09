@@ -1,17 +1,15 @@
 import React from 'react';
-import {Image } from 'react-native'
-import styled from 'styled-components';
+import { View, Image, Pressable, Alert } from 'react-native'
 
-const ProfilePictureIcon = styled.View`
-    justify-content: center;
-    border-radius: 20px;
-`;
+import { ProfilePictureIcon } from './styles';
 
-export default () => {
+export default ({style}) => {
     return (
-        <ProfilePictureIcon>
-            <Image style={{width: 40, height: 40}} 
-                source={require('../../assets/eu.jpg')} />
-        </ProfilePictureIcon>
+        <Pressable style={style} onPress={() => Alert.alert('Tela em construção', 'Vai para a tela com as informações de usuário')} >
+            <ProfilePictureIcon>
+                <Image style={{width: 55, height: 55}} 
+                    source={require('../../assets/eu.jpg')} />
+            </ProfilePictureIcon> 
+        </Pressable>
     )
 }

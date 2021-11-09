@@ -24,7 +24,7 @@ export default function Home({ navigation }) {
             }}>
             </View>
 
-            <ProfilePictureIcon />
+            <ProfilePictureIcon style={{marginLeft: "auto", marginRight: 15, marginTop: -35}} />
 
             <SearchArea>
                 <Logo width={220} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
