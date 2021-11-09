@@ -2,7 +2,7 @@
 
 ### Sobre
 
-Aplicativo de compras desenvolvido em React Native. Este projeto tem como objetivo exibir de forma amigável todas as funcionalidades desenvolvidas no <a href="https://github.com/lucasviinic/kauferservices/"> serviço back-end </a> construído utilizando Django REST Framework.
+Aplicativo de compras desenvolvido em React Native. O serviço back-end da aplicação mobile se encontra <a href="https://github.com/lucasviinic/kauferservices/"> nesse link </a> , está sendo construído utilizando Python e Django REST Framework, onde pretendo dedicar uma parte considerável do tempo, portanto, caso você tenha clonado o repositório do projeto e tenha percebido tudo estático, relaxa aí, o back-end vai ter sua hora e estou ansioso pra isso.
 
 ### Download e Configuração
 
