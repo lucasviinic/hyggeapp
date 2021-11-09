@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Icon from 'react-native-vector-icons/Feather';
 import PlusIcon from './assets/plus-icon.svg'
 import HomeIcon from './assets/home-icon.svg'
 import ProductListIcon from './assets/list-icon.svg'
@@ -12,7 +11,7 @@ import HomeScreen from './pages/Home';
 import ProductListScreen from './pages/ProductList';
 import ProductInfoScreen from './pages/ProductInfo';
 import LoginScreen from './pages/Login';
-import SignupScreen from './pages/Signup';
+import SignupScreen from './pages/SignUp';
 import { View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -83,7 +82,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="SignUp" component={SignupScreen} options={{ headerShown: false }} />
         <Stack.Screen name="HomeTabs" component={HomeTabs} options={{ headerShown: false }} />
         <Stack.Screen name="ProductInfo" component={ProductInfoScreen} options={{ headerShown: false }} />
       </Stack.Navigator>      

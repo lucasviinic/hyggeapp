@@ -28,7 +28,9 @@ export default function Login({ navigation }) {
 
   return(
     <Container>
-      <TouchableOpacity style={{marginTop: "9%", marginLeft: "70%"}}>
+      <TouchableOpacity style={{marginTop: "9%", marginLeft: "70%"}}
+        onPress={() => navigation.navigate('SignUp')}
+      >
         <Text style={{fontSize: 20, fontWeight: "bold", color: "#606060"}}>Sign Up</Text>
       </TouchableOpacity>
       <FormArea>
