@@ -17,7 +17,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Login({ navigation }) {
 
-  const [visiblePassword, setVisiblePassword] = useState(false)
+  const [visiblePassword, setVisiblePassword] = useState(true)
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
