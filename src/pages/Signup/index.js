@@ -3,7 +3,8 @@ import { Image, ScrollView } from 'react-native'
 
 import {
   Container,
-  ImageView
+  ImageView,
+  FormView
 } from './styles'
 
 export default function Login({ navigation }) {
@@ -14,6 +15,7 @@ export default function Login({ navigation }) {
         <ImageView>
           <Image style={{width: 395, height: 400}} source={require('../../assets/profile-picture-default.jpg')} />
         </ImageView>
+        <FormView />
       </ScrollView>
     </Container>
   )
