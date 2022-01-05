@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Text } from 'react-native'
 import { useForm, Controller } from "react-hook-form";
 
@@ -11,9 +11,13 @@ import {
 } from './styles'
 
 import Logo from '../../assets/logo.svg'
+import IconVisiblePassword from '../../assets/icon-visible-password.svg'
+import IconInvisiblePassword from '../../assets/icon-invisible-password.svg'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Login({ navigation }) {
+
+  const [visiblePassword, setVisiblePassword] = useState(false)
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
@@ -26,7 +30,7 @@ export default function Login({ navigation }) {
     navigation.navigate('HomeTabs')
   }
 
-  function TextBox({placeholder, value, onChangeText, password, onBlur}) {
+  function TextBox({placeholder, value, onChangeText, password, onBlur, type}) {
     return (
       <TextField>
         <TextInput
@@ -36,6 +40,20 @@ export default function Login({ navigation }) {
           secureTextEntry={password}
           onBlur={onBlur}
         />
+        {type === 'password'
+          ? (
+              <TouchableOpacity 
+                style={{
+                  marginTop: "auto", 
+                  marginBottom: "auto",
+                  marginRight: "5%",
+                }} 
+                onPress={() => setVisiblePassword(!visiblePassword)}>
+                {visiblePassword ? <IconInvisiblePassword /> : <IconVisiblePassword />}
+              </TouchableOpacity>
+            )
+          : null
+        }
       </TextField>
     )
   }
@@ -75,7 +93,6 @@ export default function Login({ navigation }) {
           )}
           name="username"
         />
-        {errors.username && <Text>This is required.</Text>}
         <Controller
           control={control}
           rules={{
@@ -86,13 +103,12 @@ export default function Login({ navigation }) {
               value={value} 
               onChangeText={onChange} 
               onBlur={onBlur} 
-              password={true} 
+              password={visiblePassword}
+              type={'password'}
             />
           )}
           name="password"
         />
-        {errors.password && <Text>This is required.</Text>}
-
         <LoginButton
           style={{
             marginTop: 45, 

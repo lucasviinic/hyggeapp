@@ -30,7 +30,7 @@ export const Options = styled.View`
   padding: 1px;
 `;
 
-export const TextField = styled.View `
+export const TextField = styled.View`
   flex-direction: row;
   height: 50px;
   width: 100%;
