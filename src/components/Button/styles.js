@@ -5,8 +5,8 @@ export const Button = styled.TouchableOpacity`
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 90px;
   border-radius: 8px;
   align-items: center;
   background-color: #41EB85;
+  elevation: 2;
 `;
