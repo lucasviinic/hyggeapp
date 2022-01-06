@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import { Text } from 'react-native'
-import { signIn } from '../../services/auth';
 import AuthContext from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
 
@@ -19,13 +18,13 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Login({ navigation }) {
 
-  const {signed} = useContext(AuthContext);
+  const {signed, user, signIn} = useContext(AuthContext);
 
   console.log(signed)
+  console.log(user)
 
-  async function handleSignIn() {
-    const response = await signIn();
-    console.log(response)
+  function handleSignIn() {
+    signIn();
   }
 
   const [visiblePassword, setVisiblePassword] = useState(true)
