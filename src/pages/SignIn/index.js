@@ -1,6 +1,6 @@
-import React, {useState, useContext} from 'react';
+import React, { useState } from 'react';
 import { Text } from 'react-native'
-import AuthContext from '../../contexts/auth';
+import { useAuth } from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
 
 import {
@@ -18,7 +18,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Login({ navigation }) {
 
-  const {signed, user, signIn} = useContext(AuthContext);
+  const {signed, user, signIn} = useAuth();
 
   console.log(signed)
   console.log(user)
