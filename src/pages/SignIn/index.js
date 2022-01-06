@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Text } from 'react-native'
+import { signIn } from '../../services/auth';
+import AuthContext from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
 
 import {
@@ -17,6 +19,15 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Login({ navigation }) {
 
+  const {signed} = useContext(AuthContext);
+
+  console.log(signed)
+
+  async function handleSignIn() {
+    const response = await signIn();
+    console.log(response)
+  }
+
   const [visiblePassword, setVisiblePassword] = useState(true)
 
   const { control, handleSubmit, formState: { errors } } = useForm({
@@ -25,9 +36,9 @@ export default function Login({ navigation }) {
       password: null
     }
   });
+
   const onSubmit = data => {
     console.log(data)
-    navigation.navigate('HomeTabs')
   }
 
   function TextBox({placeholder, value, onChangeText, password, onBlur, type}) {
@@ -116,7 +127,7 @@ export default function Login({ navigation }) {
             height: 42,
             marginBottom: 90
           }}
-          onPress={handleSubmit(onSubmit)}
+          onPress={handleSignIn}
           navigation={navigation} 
         />
       </FormArea>
