@@ -142,8 +142,8 @@ export default function Login({ navigation }) {
           navigation={navigation} 
         />
       </FormArea>
-      <View style={{marginBottom: '5%'}}>
-          <Text style={{color: '#FFFFFF'}}>© 2022 Käufer</Text>
+      <View style={{marginBottom: '10%', marginTop: -50}}>
+          <Text style={{color: '#FFFFFFCC', fontSize: 13}}>© 2022 Käufer</Text>
       </View>
     </Container>
   )
