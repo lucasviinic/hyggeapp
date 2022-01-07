@@ -8,6 +8,7 @@ export const Box = styled.View`
   flex-direction: row;
   border-radius: 14px;
   overflow: hidden;
+  elevation: 2;
 `;
 
 export const ImageField = styled.Pressable`
@@ -32,15 +33,30 @@ export const ProductInfoField = styled.View`
   background-color: #FFFFFF;
 `;
 
-export const Price = styled.View`
+export const Informations = styled.View`
   flex-direction: row;
-  margin-left: auto;
   margin-right: 9.7%;
   margin-top: auto;'
-  margin-bottom: 5%;
+  margin-bottom: 6%;
 `;
 
 export const ResumeText = styled.Text`
-  font-size: 18px;
-  color: #2D2D2D;
+  font-size: 21px;
+  color: #3E3E3E;
+  margin-top: 2%;
+`;
+
+export const Price = styled.View`
+  flex-direction: column;
+  width: 52%;
+`;
+
+export const Country = styled.View`
+  flex-direction: column;
+  margin-left: auto;
+`;
+
+export const Status = styled.View`
+  flex-direction: column;
+  margin-left: auto;
 `;
