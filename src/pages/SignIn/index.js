@@ -1,31 +1,24 @@
-import React, { useState } from 'react';
-import { Text, View, TouchableOpacity ,Dimensions } from 'react-native'
+import React from 'react';
+import { Text, View, Dimensions } from 'react-native'
 import Video from 'react-native-video';
 import { useAuth } from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
 
 import {
   Container,
-  FormArea,
-  TextField,
-  TextInput
+  FormArea
 } from './styles'
 
 import LoginButton from '../../components/LoginButton';
+import TextField from '../../components/TextField';
 
 import Logo from '../../assets/logo.svg'
-import IconVisiblePassword from '../../assets/icon-visible-password.svg'
-import IconInvisiblePassword from '../../assets/icon-invisible-password.svg'
-const { width, height } = Dimensions.get("window");
+
+const { height } = Dimensions.get("window");
 
 export default function Login({ navigation }) {
 
-  const {signed, user, signIn} = useAuth();
-
-  console.log('signed: ', signed)
-  console.log('user: ', user)
-
-  const [visiblePassword, setVisiblePassword] = useState(true)
+  const { signIn } = useAuth();
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
@@ -38,48 +31,8 @@ export default function Login({ navigation }) {
     signIn(data)
   }
 
-  function TextBox({placeholder, value, onChangeText, password, onBlur, type}) {
-    return (
-      <TextField>
-        <TextInput
-          value={value}
-          onChangeText={onChangeText}
-          placeholder={placeholder}
-          secureTextEntry={password}
-          onBlur={onBlur}
-        />
-        {type === 'password'
-          ? (
-              <TouchableOpacity 
-                style={{
-                  marginTop: "auto", 
-                  marginBottom: "auto",
-                  marginRight: "5%",
-                }} 
-                onPress={() => setVisiblePassword(!visiblePassword)}>
-                {visiblePassword ? <IconInvisiblePassword /> : <IconVisiblePassword />}
-              </TouchableOpacity>
-            )
-          : null
-        }
-      </TextField>
-    )
-  }
-
-  // function LoginButton({style, onPress}) {
-  //   return (
-  //     <Button style={{...style}} onPress={onPress}>
-  //         <Text style={{fontSize: 16, marginBottom: "auto", marginTop: "auto", 
-  //                     shadowColor: "#000", shadowOffset: {width: 2, height: 3}, 
-  //                     shadowOpacity: 1, shadowRadius: 3.62, elevation: 6.5
-  //         }}>Sign In</Text>
-  //     </Button>
-  //   );
-  // };
-
   return(
     <Container>
-
       <Video
           source={require("../../assets/background-videos/video04.mp4")}
           style={{
@@ -97,17 +50,15 @@ export default function Login({ navigation }) {
           rate={1.0}
           ignoreSilentSwitch={"obey"}
       />
-
       <FormArea>
         <Logo width={220} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
-        
         <Controller
           control={control}
           rules={{
           required: true,
           }}
           render={({ field: { onChange, onBlur, value } }) => (
-            <TextBox placeholder="Digite seu nome de usuário" 
+            <TextField placeholder="Digite seu nome de usuário" 
               value={value} 
               onChangeText={onChange} 
               onBlur={onBlur} 
@@ -121,12 +72,11 @@ export default function Login({ navigation }) {
           required: true,
           }}
           render={({ field: { onChange, onBlur, value } }) => (
-            <TextBox placeholder="Digite sua senha" 
+            <TextField placeholder="Digite sua senha" 
               value={value} 
               onChangeText={onChange} 
               onBlur={onBlur} 
-              password={visiblePassword}
-              type={'password'}
+              password={true}
             />
           )}
           name="password"

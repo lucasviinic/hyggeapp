@@ -1,31 +1,41 @@
 import React, {useState} from 'react'
+import { TouchableOpacity } from 'react-native'
 
 import {
-    SearchField,
-    TextInput
+  TextField,
+  TextInput
 } from './styles'
 
-export default function TextField({placeholder, password, value}){
-  const [text, onChangeText] = useState(value)
+import IconVisiblePassword from '../../assets/icon-visible-password.svg'
+import IconInvisiblePassword from '../../assets/icon-invisible-password.svg'
 
-  return(
-    <SearchField style={{
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 1,
-      },
-      shadowOpacity: 1,
-      shadowRadius: 2,
+export default ({placeholder, value, onChangeText, password, onBlur}) => {
 
-      elevation: 3,
-    }}>
-      <TextInput 
-        value={text}
+  const [visiblePassword, setVisiblePassword] = useState(true)
+
+  return (
+    <TextField>
+      <TextInput
+        value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        secureTextEntry={password}
+        secureTextEntry={password ? visiblePassword : null}
+        onBlur={onBlur}
       />
-    </SearchField>
+      {password
+        ? (
+            <TouchableOpacity 
+              style={{
+                marginTop: "auto", 
+                marginBottom: "auto",
+                marginRight: "5%",
+              }} 
+              onPress={() => setVisiblePassword(!visiblePassword)}>
+              {visiblePassword ? <IconInvisiblePassword /> : <IconVisiblePassword />}
+            </TouchableOpacity>
+          )
+        : null
+      }
+    </TextField>
   )
 }

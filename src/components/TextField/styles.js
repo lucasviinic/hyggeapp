@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-export const SearchField = styled.View`
-  flex-direction: row;
-  align-items: center;
-  height: 51px;
-  width: 91%;
-  border-radius: 25px;
-  background-color: #FFFFFF;
-  margin-top: 4.5%;
-  margin-bottom: 4.5%;
-`;
-
 export const TextInput = styled.TextInput`
   flex: 1;
   padding-top: 10px;
@@ -18,4 +7,14 @@ export const TextInput = styled.TextInput`
   padding-bottom: 10px;
   padding-left: 17px;
   color: #424242;
+`;
+
+export const TextField = styled.View`
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #FFFFFF99;
+  margin-top: 4.5%;
+  elevation: 2;
 `;
