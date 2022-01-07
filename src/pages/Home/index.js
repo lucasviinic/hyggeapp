@@ -1,5 +1,6 @@
 import React from 'react';
-import { View } from 'react-native'
+import { View, Button } from 'react-native'
+import { useAuth } from '../../contexts/auth';
 
 import ProfilePictureIcon from '../../components/ProfilePictureIcon';
 import SearchField from '../../components/SearchField'
@@ -11,6 +12,9 @@ import {
 } from './styles'
 
 export default function Home({ navigation }) {
+
+    const { signOut } = useAuth();
+
     return(
         <Container>
             <View style={{
@@ -22,6 +26,9 @@ export default function Home({ navigation }) {
                 justifyContent: "flex-end"
             }}>
             </View>
+
+            {/* Boão de teste */}
+            <Button onPress={() => signOut()} title="Sair" />
 
             <ProfilePictureIcon style={{marginLeft: "auto", marginRight: 11, marginTop: -35}} />
 

@@ -7,7 +7,7 @@ const AuthContext = createContext({signed: true, user: {}, loading: true, signIn
 
 export const AuthProvider = ({children}) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadStorageData(){
