@@ -14,7 +14,7 @@ export const AuthProvider = ({children}) => {
       const storageUser = await AsyncStorage.getItem('RNAuth:user');
       const storageToken = await AsyncStorage.getItem('RNAuth:token');
 
-      api.defaults.headers['Authorization'] = `Bearer ${storageToken}`;
+      api.defaults.headers.Authorization = `Bearer ${storageToken}`;
 
       if (storageUser && storageToken) {
         setUser(JSON.parse(storageUser));
@@ -30,7 +30,7 @@ export const AuthProvider = ({children}) => {
 
     setUser(response.data.user);
 
-    api.defaults.headers['Authorization'] = `Bearer ${response.data.token}`;
+    api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
 
     await AsyncStorage.setItem('RNAuth:user', JSON.stringify(response.data.user));
     await AsyncStorage.setItem('RNAuth:token', response.data.token);
