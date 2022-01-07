@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Dimensions } from 'react-native'
+import { Text, View, TouchableOpacity, Dimensions } from 'react-native'
 import Video from 'react-native-video';
 import { useAuth } from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
@@ -8,14 +8,15 @@ import {
   Container,
   FormArea,
   TextField,
-  TextInput,
-  Button
+  TextInput
 } from './styles'
+
+import LoginButton from '../../components/LoginButton';
 
 import Logo from '../../assets/logo.svg'
 import IconVisiblePassword from '../../assets/icon-visible-password.svg'
 import IconInvisiblePassword from '../../assets/icon-invisible-password.svg'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
 const { width, height } = Dimensions.get("window");
 
 export default function Login({ navigation }) {
@@ -66,16 +67,16 @@ export default function Login({ navigation }) {
     )
   }
 
-  function LoginButton({style, onPress}) {
-    return (
-      <Button style={{...style}} onPress={onPress}>
-          <Text style={{fontSize: 16, marginBottom: "auto", marginTop: "auto", 
-                      shadowColor: "#000", shadowOffset: {width: 2, height: 3}, 
-                      shadowOpacity: 1, shadowRadius: 3.62, elevation: 6.5
-          }}>Sign In</Text>
-      </Button>
-    );
-  };
+  // function LoginButton({style, onPress}) {
+  //   return (
+  //     <Button style={{...style}} onPress={onPress}>
+  //         <Text style={{fontSize: 16, marginBottom: "auto", marginTop: "auto", 
+  //                     shadowColor: "#000", shadowOffset: {width: 2, height: 3}, 
+  //                     shadowOpacity: 1, shadowRadius: 3.62, elevation: 6.5
+  //         }}>Sign In</Text>
+  //     </Button>
+  //   );
+  // };
 
   return(
     <Container>
