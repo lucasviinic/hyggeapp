@@ -35,7 +35,7 @@ export const TextField = styled.View`
   height: 50px;
   width: 100%;
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #FFFFFF99;
   margin-top: 4.5%;
   elevation: 2;
 `;
@@ -54,7 +54,7 @@ export const Button = styled.TouchableOpacity`
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 8px;
+  border-radius: 30px;
   align-items: center;
   background-color: #41EB85;
   elevation: 2;

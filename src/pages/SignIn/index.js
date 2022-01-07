@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Text } from 'react-native'
+import { Text, View, Dimensions } from 'react-native'
+import Video from 'react-native-video';
 import { useAuth } from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
 
@@ -15,6 +16,7 @@ import Logo from '../../assets/logo.svg'
 import IconVisiblePassword from '../../assets/icon-visible-password.svg'
 import IconInvisiblePassword from '../../assets/icon-invisible-password.svg'
 import { TouchableOpacity } from 'react-native-gesture-handler';
+const { width, height } = Dimensions.get("window");
 
 export default function Login({ navigation }) {
 
@@ -77,11 +79,25 @@ export default function Login({ navigation }) {
 
   return(
     <Container>
-      <TouchableOpacity style={{marginTop: "9%", marginLeft: "70%"}}
-        onPress={() => navigation.navigate('SignUp')}
-      >
-        <Text style={{fontSize: 20, fontWeight: "bold", color: "#3D3D3D"}}>Sign Up</Text>
-      </TouchableOpacity>
+
+      <Video
+          source={require("../../assets/background-videos/video04.mp4")}
+          style={{
+            height: height,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            alignItems: "stretch",
+            bottom: 0,
+            right: 0
+          }}
+          muted={true}
+          repeat={true}
+          resizeMode={"cover"}
+          rate={1.0}
+          ignoreSilentSwitch={"obey"}
+      />
+
       <FormArea>
         <Logo width={220} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
         
@@ -126,6 +142,9 @@ export default function Login({ navigation }) {
           navigation={navigation} 
         />
       </FormArea>
+      <View style={{marginBottom: '5%'}}>
+          <Text style={{color: '#FFFFFF'}}>© 2022 Käufer</Text>
+      </View>
     </Container>
   )
 }
