@@ -4,7 +4,7 @@ import { useAuth } from '../../contexts/auth';
 
 import ProfilePictureIcon from '../../components/ProfilePictureIcon';
 import SearchField from '../../components/SearchField'
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/logo-home.svg'
 
 import {
   Container,

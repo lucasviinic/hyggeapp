@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TouchableOpacity, Dimensions } from 'react-native'
+import { Text, View, TouchableOpacity ,Dimensions } from 'react-native'
 import Video from 'react-native-video';
 import { useAuth } from '../../contexts/auth';
 import { useForm, Controller } from "react-hook-form";
@@ -16,7 +16,6 @@ import LoginButton from '../../components/LoginButton';
 import Logo from '../../assets/logo.svg'
 import IconVisiblePassword from '../../assets/icon-visible-password.svg'
 import IconInvisiblePassword from '../../assets/icon-invisible-password.svg'
-
 const { width, height } = Dimensions.get("window");
 
 export default function Login({ navigation }) {
