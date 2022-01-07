@@ -20,20 +20,10 @@ export default function Home({ navigation }) {
 
     return(
         <Container>
-            <View style={{
-                marginRight: "9.5%",
-                marginTop: "7%",
-                height: 35, 
-                width: "100%",
-                flexDirection: "row",
-                justifyContent: "flex-end"
-            }}>
-            </View>
-
             {/* Boão de teste */}
             <Button onPress={() => signOut()} title="Sair" />
 
-            <ProfilePictureIcon style={{marginLeft: "auto", marginRight: 11, marginTop: -35}} />
+            <ProfilePictureIcon style={{marginLeft: "auto", marginRight: 11, marginTop: 5}} />
 
             <SearchArea>
                 <Logo width={220} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
