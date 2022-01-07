@@ -25,15 +25,15 @@ export const AuthProvider = ({children}) => {
     loadStorageData();
   }, []);
 
-  async function signIn() {
-    const response = await auth.signIn();
+  async function signIn(data) {
+    const response = await auth.signIn(data);
 
-    setUser(response.user);
+    setUser(response.data.user);
 
-    api.defaults.headers['Authorization'] = `Bearer ${response.token}`;
+    api.defaults.headers['Authorization'] = `Bearer ${response.data.token}`;
 
-    await AsyncStorage.setItem('RNAuth:user', JSON.stringify(response.user));
-    await AsyncStorage.setItem('RNAuth:token', response.token);
+    await AsyncStorage.setItem('RNAuth:user', JSON.stringify(response.data.user));
+    await AsyncStorage.setItem('RNAuth:token', response.data.token);
   }
 
   function signOut(){

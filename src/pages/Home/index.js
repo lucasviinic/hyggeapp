@@ -13,7 +13,10 @@ import {
 
 export default function Home({ navigation }) {
 
-    const { signOut } = useAuth();
+    const { signed, user, signOut } = useAuth();
+
+    console.log('signed: ', signed);
+    console.log('user: ', user);
 
     return(
         <Container>

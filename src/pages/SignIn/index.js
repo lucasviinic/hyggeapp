@@ -20,24 +20,20 @@ export default function Login({ navigation }) {
 
   const {signed, user, signIn} = useAuth();
 
-  console.log(signed)
-  console.log(user)
-
-  function handleSignIn() {
-    signIn();
-  }
+  console.log('signed: ', signed)
+  console.log('user: ', user)
 
   const [visiblePassword, setVisiblePassword] = useState(true)
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
-      username: null,
-      password: null
+      username: 'teste1',
+      password: '1234'
     }
   });
 
   const onSubmit = data => {
-    console.log(data)
+    signIn(data)
   }
 
   function TextBox({placeholder, value, onChangeText, password, onBlur, type}) {
@@ -126,7 +122,7 @@ export default function Login({ navigation }) {
             height: 42,
             marginBottom: 90
           }}
-          onPress={handleSignIn}
+          onPress={handleSubmit(onSubmit)}
           navigation={navigation} 
         />
       </FormArea>
