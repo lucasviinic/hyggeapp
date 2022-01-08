@@ -59,3 +59,13 @@ export const Button = styled.TouchableOpacity`
   background-color: #41EB85;
   elevation: 2;
 `;
+
+export const Footer = styled.View`
+  margin-bottom: 10%;
+  margin-top: -50px;
+`;
+
+export const Copyright = styled.Text`
+  font-size: 12px;
+  color: #FFFFFFCC;
+`;

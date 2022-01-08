@@ -6,7 +6,9 @@ import { useForm, Controller } from "react-hook-form";
 
 import {
   Container,
-  FormArea
+  FormArea,
+  Footer,
+  Copyright
 } from './styles'
 
 import LoginButton from '../../components/LoginButton';
@@ -81,20 +83,11 @@ export default function Login({ navigation }) {
           )}
           name="password"
         />
-        <LoginButton
-          style={{
-            marginTop: 45, 
-            width: '60%', 
-            height: 42,
-            marginBottom: 90
-          }}
-          onPress={handleSubmit(onSubmit)}
-          navigation={navigation} 
-        />
+        <LoginButton onPress={handleSubmit(onSubmit)} navigation={navigation} />
       </FormArea>
-      <View style={{marginBottom: '10%', marginTop: -50}}>
-          <Text style={{color: '#FFFFFFCC', fontSize: 13}}>© 2022 Käufer</Text>
-      </View>
+      <Footer>
+        <Copyright>© 2022 Käufer</Copyright>
+      </Footer>
     </Container>
   )
 }

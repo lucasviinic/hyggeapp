@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Button = styled.TouchableOpacity`
-  height: 8%;
-  width: 50%;
+  height: 44px;
+  width: 60%;
+  margin-top: 45px;
+  margin-bottom: 90px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;
