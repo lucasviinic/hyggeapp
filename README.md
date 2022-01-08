@@ -13,7 +13,7 @@ Aplicativo de compras desenvolvido em React Native. O serviço back-end da aplic
 ### Screenshots
 
 <p float="left">
-  <img src="https://i.imgur.com/z9TXjZv.jpg" width="195" />
+  <img src="https://i.imgur.com/siscyTO.jpg" width="195" />
   <img src="https://i.imgur.com/yNqqE1P.jpg" width="195" />
   <img src="https://i.imgur.com/l66vSZX.jpeg" width="195" />
   <img src="https://i.imgur.com/peyejlY.jpeg" width="195" />
