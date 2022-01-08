@@ -1,8 +1,7 @@
 import React, {useEffect} from "react";
-import { ScrollView, Text } from 'react-native'
+import { FlatList, View } from 'react-native'
 import { useApp } from '../../contexts/app';
 
-import LinearGradient from "react-native-linear-gradient";
 import SearchField from '../../components/SearchField'
 import ProductBox from "../../components/ProductBox";
 
@@ -17,21 +16,15 @@ export default function ProductList({ route, navigation }){
   }, []);
 
   return(
-    <LinearGradient style={{flex: 1, width: "100%"}} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} colors={['#2D2C33', '#41404A']}>
-      <Container>
-        <SearchField navigation={navigation} value={route.params} />
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <ProductBox />
-          <ProductBox />
-          <ProductBox />
-          <Text>
-            {
-              products ? products.map(product => product.name).join(', ') : 'Loading...'
-            }
-          </Text>
-        </ScrollView>
-      </Container>
-    </LinearGradient>
-
+    <Container>
+      <SearchField navigation={navigation} value={route.params} />
+      <View>
+        <FlatList
+          data={products}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => <ProductBox navigation={navigation} item={item} />}
+        />
+      </View>
+    </Container>
   )
 }

@@ -12,8 +12,9 @@ import {
   ResumeText
 } from './styles'
 
-export default function ProductBox(){
+export default function ProductBox({ item, navigation }) {
 
+  console.log('item', item)
   const image = {uri: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1633027804000'}
 
   return(
@@ -23,7 +24,7 @@ export default function ProductBox(){
       </ImageField>
       <ProductInfoField>
         <TouchableOpacity>
-          <ResumeText>MacBook Air</ResumeText>
+          <ResumeText>{item.name.slice(0, 13)}...</ResumeText>
         </TouchableOpacity>
         <Informations>
           <Price>
@@ -32,7 +33,7 @@ export default function ProductBox(){
           </Price>
           <Country>
             <Text style={{fontSize: 11.5}}>País</Text>
-            <Text style={{fontSize: 18}}>USA</Text>
+            <Text style={{fontSize: 18}}>{item.country_code}</Text>
           </Country>
           <Status>
             <Text style={{fontSize: 11.5}}>Status</Text>
