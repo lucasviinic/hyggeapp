@@ -1,15 +1,18 @@
 import React from 'react';
 import { Image, Pressable, Alert } from 'react-native'
 
-import { ProfilePictureIcon } from './styles';
+import {
+  ProfileIcon,
+  ProfilePictureIcon 
+} from './styles';
 
-export default ({style}) => {
+export default ({style, navigation}) => {
     return (
-        <Pressable style={style} onPress={() => Alert.alert('Em construção', 'Vai para a tela com as informações de usuário')} >
+        <ProfileIcon onPress={() => navigation.navigate('Profile')} >
             <ProfilePictureIcon>
                 <Image style={{width: 53, height: 53}} 
                     source={require('../../assets/eu.jpg')} />
             </ProfilePictureIcon> 
-        </Pressable>
+        </ProfileIcon>
     )
 }

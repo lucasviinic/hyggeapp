@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from '../pages/Home';
+import Profile from '../pages/Profile';
 import ProductList from "../pages/ProductList";
 
 import PlusIcon from '../assets/plus-icon.svg'
@@ -45,7 +46,7 @@ export default function AuthRoutes() {
           }} 
         />
         <Tab.Screen
-          name="Personalizar"
+          name="Pedir"
           component={Home}
           options={() => ({
             tabBarIcon: () => (
@@ -78,6 +79,7 @@ export default function AuthRoutes() {
   return (
     <AuthStack.Navigator>
       <AuthStack.Screen name="HomeTabs" component={HomeTabs} options={{ headerShown: false }} />
+      <AuthStack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
       <AuthStack.Screen name="ProductList" component={ProductList} options={{ headerShown: false }} />
     </AuthStack.Navigator>
   )
