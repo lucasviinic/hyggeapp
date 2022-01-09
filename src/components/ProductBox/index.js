@@ -14,7 +14,6 @@ import {
 
 export default function ProductBox({ item, navigation }) {
 
-  console.log('item', item)
   const image = {uri: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1633027804000'}
 
   return(
