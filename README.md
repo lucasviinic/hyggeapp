@@ -1,4 +1,4 @@
-# Käufer Mobile App ✈ #SideProject
+# Käufer Mobile App ✈
 
 ### Sobre
 
