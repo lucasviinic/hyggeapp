@@ -12,3 +12,14 @@ export const Options = styled.View`
   flex-direction: row;
   padding: 1px;
 `;
+
+export const Filters = styled.View`
+  flex-direction: row;
+  background-color: grey;
+  margin-top: -3px;
+  margin-bottom: 10px;
+  height: 38px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;

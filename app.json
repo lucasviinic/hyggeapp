@@ -5,7 +5,15 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": { 
+       "bundleIdentifier": "com.kaufer.kaufer", 
+       "buildNumber": "1.0.0" 
+     }, 
+     "android": {
+       "package": "com.kaufer.kaufer",
+       "versionCode": 1
+      }
   },
   "name": "kaufer"
 }

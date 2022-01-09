@@ -5,7 +5,7 @@ import { useApp } from '../../contexts/app';
 import SearchField from '../../components/SearchField'
 import ProductBox from "../../components/ProductBox";
 
-import { Container } from "./styles";
+import { Container, Filters } from "./styles";
 
 export default function ProductList({ route, navigation }){
 
@@ -23,9 +23,13 @@ export default function ProductList({ route, navigation }){
   return(
     <Container>
       <SearchField navigation={navigation} value={route.params} />
-      <View>
-        {products.length > 0 ? (
+      <Filters>
+        <Text>View destinada aos filtros</Text>
+      </Filters>
+      <View style={{flex: 1}}>
+        {products && products.length > 0 ? (
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={products}
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => <ProductBox navigation={navigation} item={item} />}

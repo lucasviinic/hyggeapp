@@ -28,15 +28,15 @@ export default function ProductBox({ item, navigation }) {
         <Informations>
           <Price>
             <Text style={{fontSize: 11.5}}>Preço</Text>
-            <Text style={{fontSize: 17}}>R$ 29.121,32</Text>
+            <Text style={{fontSize: 17}}>R$ {item.final_price}</Text>
           </Price>
           <Country>
             <Text style={{fontSize: 11.5}}>País</Text>
-            <Text style={{fontSize: 18}}>{item.country_code}</Text>
+            <Text style={{fontSize: 17}}>{item.country_code}</Text>
           </Country>
           <Status>
             <Text style={{fontSize: 11.5}}>Status</Text>
-            <Text style={{fontSize: 18, color: '#41EB85'}}>Open</Text>
+            <Text style={{fontSize: 17, color: '#41EB85'}}>{item.status}</Text>
           </Status>
         </Informations>
       </ProductInfoField>

@@ -24,7 +24,7 @@ export default function Login({ navigation }) {
 
   const { control, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
-      username: 'teste1',
+      username: 'lucasviinic',
       password: '1234'
     }
   });

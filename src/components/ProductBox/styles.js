@@ -53,10 +53,10 @@ export const Price = styled.View`
 
 export const Country = styled.View`
   flex-direction: column;
-  margin-left: auto;
+  margin-left: 5px;
 `;
 
 export const Status = styled.View`
   flex-direction: column;
-  margin-left: auto;
+  margin-left: 12px;
 `;
