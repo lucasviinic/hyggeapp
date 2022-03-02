@@ -1,4 +1,4 @@
-# Käufer Mobile App ✈
+# Hygge Mobile App ✈
 
 ### Sobre
 
@@ -13,20 +13,23 @@ Aplicativo de compras desenvolvido em React Native. O serviço back-end da aplic
 ### Screenshots
 
 <p float="left">
-  <img src="https://i.imgur.com/siscyTO.jpg" width="195" />
+  <img src="https://i.imgur.com/PIMwZLe.jpg" width="195" />
+  <img src="https://i.imgur.com/Pdme5YH.jpg" width="195" />
+  <img src="https://i.imgur.com/GdvOpC9.jpg" width="195" />
   <img src="https://i.imgur.com/yNqqE1P.jpg" width="195" />
 </p>
 
 #### Telas construidas até o momento
 
-- [x] 1. Home (Tela principal, onde se encontra o campo de busca)
+- [x] 1. Dashboard (Tela principal onde se encontra informações de pedidos de usuário, novidades e tendências)
 - [x] 2. Informações do Produto
 - [x] 3. Lista de Pedidos
 - [ ] 4. Adicionar Pedido Personalizado
-- [ ] 5. Tela de Cadastro
+- [x] 5. Tela de Cadastro
 - [x] 6. Tela de Login
 - [ ] 7. Perfil (Tela onde é exibido as informações do usuário)
+- [x] 8. Home (Tela incial, onde o usuário se depara quando entre no app sem estar logado)
 
-##### Obs: Obviamente, mais telas serão adicionadas na lista, estas são as previstas até o momento.
+##### Obs: Obviamente, mais telas serão adicionadas na lista, estas são as previstas até o momento. Em algumas telas pode estar o nome "Käufer", nome antigo, isso acontece pois a tela em questão não foi reconstruída ainda.
 
 
