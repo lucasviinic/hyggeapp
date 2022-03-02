@@ -14,7 +14,7 @@ import {
 import LoginButton from '../../components/LoginButton';
 import TextField from '../../components/TextField';
 
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/logo_hygge.svg'
 
 const { height } = Dimensions.get("window");
 
@@ -53,7 +53,7 @@ export default function Login({ navigation }) {
           ignoreSilentSwitch={"obey"}
       />
       <FormArea>
-        <Logo width={220} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
+        <Logo width={195} marginLeft={"auto"} marginRight={"auto"} marginBottom={-60} />
         <Controller
           control={control}
           rules={{

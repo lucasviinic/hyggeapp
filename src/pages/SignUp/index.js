@@ -9,12 +9,12 @@ import {
   FormView
 } from './styles'
 
-export default function Home({ navigation }) {
+export default function SignUp({ navigation }) {
 
   return(
     <Container>
       <ScrollView>
-        <Text style={{fontSize: 20, marginTop: 330}}>Home</Text>
+        <Text style={{fontSize: 20, marginTop: 330}}>Tela de Registro</Text>
       </ScrollView>
     </Container>
   )
