@@ -28,7 +28,7 @@ Aplicativo de compras desenvolvido em React Native. O serviço back-end da aplic
 - [x] 5. Tela de Cadastro
 - [x] 6. Tela de Login
 - [ ] 7. Perfil (Tela onde é exibido as informações do usuário)
-- [x] 8. Home (Tela incial, onde o usuário se depara quando entre no app sem estar logado)
+- [x] 8. Home (Tela incial, onde o usuário se depara quando entra no app sem estar logado)
 
 ##### Obs: Obviamente, mais telas serão adicionadas na lista, estas são as previstas até o momento. Em algumas telas pode estar o nome "Käufer", nome antigo, isso acontece pois a tela em questão não foi reconstruída ainda.
 
